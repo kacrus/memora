@@ -7,9 +7,24 @@
 
     <span class="spacer"></span>
 
-    <button mat-button (click)="onLoginClicked()">
-     <span class="login-button-text">Login</span>
-    </button>
+    <div>
+      <button mat-button (click)="onLoginClicked()" *ngIf="!isAuthenticated()">
+        <span class="button-text">Login</span>
+      </button>
+
+      <button mat-button [matMenuTriggerFor]="menu" *ngIf="isAuthenticated()">
+        <span class="button-text">{{ getUserName() }}</span>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="after">
+        <button mat-menu-item (click)="onLogoutClicked()">
+          Logout
+        </button>
+      </mat-menu>
+
+      <span>
+
+      </span>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
