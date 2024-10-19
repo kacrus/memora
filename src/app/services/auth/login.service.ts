@@ -62,7 +62,7 @@ export class LoginService {
   }
 
   private getRedirectUri(): string {
-    return `${location.protocol}//${location.host}/login/callback`;
+    return `${location.protocol}//${location.host}/memora/login/callback`;
   }
 }
 

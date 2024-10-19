@@ -3,4 +3,5 @@ import { LoginCallbackPageComponent } from './pages/auth/login-callback-page/log
 
 export const routes: Routes = [
     { path: 'login/callback', component: LoginCallbackPageComponent },
+    { path: 'memora/login/callback', component: LoginCallbackPageComponent },
 ];
